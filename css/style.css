@@ -175,7 +175,7 @@ html, body {
   font-size: 1.1em;
   border-color: var(--accent-color);
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
