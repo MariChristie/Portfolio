@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerButton = document.querySelector('.hamburger-button');
     const header = document.querySelector('.hero-section');
     const mainNav = document.querySelector('.main-nav');
+    const sections = document.querySelectorAll('header[id], section[id]');
+    const navLinks = document.querySelectorAll('.main-nav ul li a');
+    const typingElement = document.querySelector('.typing-effect');
 
     if (hamburgerButton && header && mainNav) {
         hamburgerButton.addEventListener('click', () => {
@@ -18,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (mainNav) {
-        const stickyPoint = 50; 
+        const stickyPoint = 50;
         window.addEventListener('scroll', function() {
             if (window.innerWidth > 992) {
                 if (window.scrollY > stickyPoint) {
@@ -31,9 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    const sections = document.querySelectorAll('header[id], section[id]');
-    const navLinks = document.querySelectorAll('.main-nav ul li a');
 
     function highlightNavLink() {
         let currentActive = 'home';
@@ -53,6 +53,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    window.addEventListener('scroll', highlightNavLink);
-    window.addEventListener('load', highlightNavLink);
+    if (sections.length > 0 && navLinks.length > 0) {
+        window.addEventListener('scroll', highlightNavLink);
+        window.addEventListener('load', highlightNavLink);
+    }
+
+    if (typingElement) {
+        const textToType = "Mary Christie";
+        const typingSpeed = 150;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textToType.length) {
+                typingElement.textContent += textToType.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            }
+        }
+        type();
+    }
 });
