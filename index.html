@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,7 +24,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#aboutme">About me</a></li>
-                <li><a href="#project">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -57,10 +58,11 @@
                         <h1>About Me</h1>
                     </div>
 
-                    <div class="content-card">
+                    <div class="content-card fade-in-element">
                         <div class="content">
                             <h3>I'm a <span class="highlight">UI/UX Designer</span> and <span class="highlight">Front-end Developer</span> passionate about crafting user-centered digital solutions.</h3>
                             <p>I translate complex ideas into clean, functional code and engaging interfaces. Whether it's a landing page, an e-commerce site, or a full-scale web application, my goal is to create a <span class="highlight">seamless journey</span> from the first click to the final conversion.</p>
+                            <p>Currently a student in Systems Analysis and Development.</p>
                             <div class="button">
                                 <a href="">Read More</a>
                             </div>
@@ -72,11 +74,111 @@
                         </div>
                     </div>
                     </div>
-                    <div class="image-section">
+                    <div class="image-section fade-in-element  delay-1">
                         <img src="/img/iconteste.jpg">
                     </div>
             </div>
         </section>
+
+        <section class="section" id="tools">
+            <div class="tools-container">
+                <div class="title">
+                    <h1>Code and Design Tools</h1>
+                </div>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <i class="devicon-html5-plain colored"></i>
+                            <p>HTML</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="devicon-css3-plain colored"></i>
+                            <p>CSS</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <p>Javascript</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="devicon-figma-plain colored"></i>
+                            <p>Figma</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="devicon-photoshop-plain colored"></i>
+                            <p>Photoshop</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container1 column-layout">
+                <h2 class="section__title">Projects</h2>
+                <div class="projects__container">
+                    <article class="projects__card">
+                        <div class="projects__image">
+                            <img src="/img/iconteste.jpg" alt="Imagem do Projeto 1" class="projects__img">
+                            <a href="#" target="_blank" class="projects__button">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="projects__content">
+                            <div class="projects__data">
+                                <span class="projects__subtitle">Web</span>
+                                <h2 class="projects__title">Modern Website</h2>
+                                <p class="projects__description">
+                                    Website adaptable to all devices, with ui components and animated interactions.
+                                </p>
+                            </div>
+                            <div class="projects__number">01</div>
+                        </div>
+                    </article>
+
+                    <article class="projects__card">
+                        <div class="projects__image">
+                            <img src="/img/iconteste.jpg" alt="Imagem do Projeto 2" class="projects__img">
+                            <a href="#" target="_blank" class="projects__button">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="projects__content">
+                            <div class="projects__data">
+                                <span class="projects__subtitle">App</span>
+                                <h2 class="projects__title">Mobile App</h2>
+                                <p class="projects__description">
+                                    App with an attractive design, developed for an optimal user experience.
+                                </p>
+                            </div>
+                            <div class="projects__number">02</div>
+                        </div>
+                    </article>
+                    
+                    <article class="projects__card">
+                        <div class="projects__image">
+                            <img src="/img/iconteste.jpg" alt="Imagem do Projeto 3" class="projects__img">
+                            <a href="#" target="_blank" class="projects__button">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="projects__content">
+                            <div class="projects__data">
+                                <span class="projects__subtitle">Design</span>
+                                <h2 class="projects__title">UI/UX Design</h2>
+                                <p class="projects__description">
+                                    Design focused on user experience, with a clean interface and intuitive interactions.
+                                </p>
+                            </div>
+                            <div class="projects__number">03</div>
+                        </div>
+                    </article>
+                </div> 
+            </div> 
+        </section>
+
+
+
+
+
+
     </main>
 
 

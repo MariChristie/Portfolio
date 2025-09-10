@@ -73,3 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
         type();
     }
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+});
+
+const elementsToAnimate = document.querySelectorAll('.fade-in-element');
+elementsToAnimate.forEach((el) => observer.observe(el));
