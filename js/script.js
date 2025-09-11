@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgerButton = document.querySelector('.hamburger-button');
     const header = document.querySelector('.hero-section');
     const mainNav = document.querySelector('.main-nav');
-    const sections = document.querySelectorAll('header[id], section[id]');
-    const navLinks = document.querySelectorAll('.main-nav ul li a');
-    const typingElement = document.querySelector('.typing-effect');
 
     if (hamburgerButton && header && mainNav) {
         hamburgerButton.addEventListener('click', () => {
@@ -35,16 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const sections = document.querySelectorAll('header[id], section[id]');
+    const navLinks = document.querySelectorAll('.main-nav ul li a');
+
     function highlightNavLink() {
         let currentActive = 'home';
-
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 150;
             if (window.scrollY >= sectionTop) {
                 currentActive = section.getAttribute('id');
             }
         });
-
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === '#' + currentActive) {
@@ -58,11 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('load', highlightNavLink);
     }
 
+    const typingElement = document.querySelector('.typing-effect');
     if (typingElement) {
         const textToType = "Mary Christie";
         const typingSpeed = 150;
         let charIndex = 0;
-
+        
         function type() {
             if (charIndex < textToType.length) {
                 typingElement.textContent += textToType.charAt(charIndex);
@@ -72,15 +71,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         type();
     }
-});
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-        }
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
     });
+    const elementsToAnimate = document.querySelectorAll('.fade-in-element');
+    elementsToAnimate.forEach((el) => observer.observe(el));
 });
 
-const elementsToAnimate = document.querySelectorAll('.fade-in-element');
-elementsToAnimate.forEach((el) => observer.observe(el));
+const swiper = new Swiper('.project-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true, 
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            centeredSlides: false,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: false,
+        }
+    }
+});
