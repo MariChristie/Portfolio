@@ -67,7 +67,7 @@ nav {
   display: flex;
   justify-content: space-between;
   font-family: system-ui,-apple-system, Helvetica, Arial, sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(..img/header.png);
   padding: 0;
   background-repeat: no-repeat; 
   background-size: cover; 
@@ -1168,4 +1168,5 @@ footer {
     padding: 3rem 2rem;
   }
 }
+
 
