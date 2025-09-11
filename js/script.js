@@ -114,3 +114,7 @@ const swiper = new Swiper('.project-swiper', {
         }
     }
 });
+
+document.getElementById('contact-btn').addEventListener('click', () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
