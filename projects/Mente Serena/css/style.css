@@ -36,7 +36,6 @@ html {
 
 
 html, body {
-  overscroll-behavior: none;
   width: 100%;
   position: relative;
   overflow-x: hidden;
@@ -1699,4 +1698,5 @@ body.no-scroll {
   .footer-col {
       align-items: center;
   }
+
 }
