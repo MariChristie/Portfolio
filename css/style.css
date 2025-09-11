@@ -1137,8 +1137,8 @@ header {
   padding-bottom: 2rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
-  flex-wrap: wrap; /* Para o responsive */
-  gap: 1.5rem; /* Espaçamento para o responsive */
+  flex-wrap: wrap; 
+  gap: 1.5rem; 
 }
 
 .footer-tagline p {
