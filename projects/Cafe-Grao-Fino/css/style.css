@@ -65,7 +65,7 @@ html, body {
     justify-content: center;
     text-align: center;
     color: var(--text-contrast-color);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('img/grão.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/grão.png');
     background-size: cover;
     background-position: center;
 }
@@ -764,3 +764,4 @@ footer {
     }
 
 }
+
